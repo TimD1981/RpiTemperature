@@ -28,8 +28,8 @@ fi
 if [ $scriptAction == 'INSTALL' ] ; then
     logMessage "++ Installing RpiTemperature"
 
-    updateActiveFile "$qmlDir/PageSettingsGeneral.qml"
-    updateActiveFile "$qmlDir/PageSettingsShutdown.qml"
+    # updateActiveFile "$qmlDir/PageSettingsGeneral.qml"
+    # updateActiveFile "$qmlDir/PageSettingsShutdown.qml"
 
     installService $packageName
 
@@ -43,8 +43,8 @@ fi
 if [ $scriptAction == 'UNINSTALL' ] ; then
     logMessage "++ Uninstalling RpiTemperature"
 
-    restoreActiveFile "$qmlDir/PageSettingsGeneral.qml"
-    restoreActiveFile "$qmlDir/PageSettingsShutdown.qml"
+    # restoreActiveFile "$qmlDir/PageSettingsGeneral.qml"
+    # restoreActiveFile "$qmlDir/PageSettingsShutdown.qml"
     removeService $packageName
 fi
 
