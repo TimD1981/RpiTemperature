@@ -1,14 +1,5 @@
 #!/usr/bin/env python
 
-# Copyright (c) 2021 LHardwick-git
-# Licensed under the BSD 3-Clause license. See LICENSE file in the project root for full license information.
-#
-
-# If edditing then use 
-# svc -d /service/dbus-cpu and
-# svc -u /service/dbus-cpu
-# to stop and restart the service 
-
 from dbus.mainloop.glib import DBusGMainLoop
 import sys
 if sys.version_info.major == 2:
