@@ -68,6 +68,21 @@ def dbusconnection():
     return SessionBus() if 'DBUS_SESSION_BUS_ADDRESS' in os.environ else SystemBus()
 
 
+def getrevision():
+  # Extract board revision from cpuinfo file
+  myrevision = "0000"
+  try:
+    f = open('/proc/cpuinfo','r')
+    for line in f:
+      if line[0:8]=='Revision':
+        length=len(line)
+        myrevision = line[11:length-1]
+    f.close()
+  except:
+    myrevision = "0000"
+
+  return myrevision
+
 # Argument parsing removed from source as never used 
 class args: pass
 args.debug = False
@@ -95,8 +110,8 @@ def new_service(base, type, physical, logical, id, instance, settingId = False):
     self.add_path('/DeviceInstance', instance)
     self.add_path('/ProductId', 0)
     self.add_path('/ProductName', '')
-    self.add_path('/FirmwareVersion', 0)
-    self.add_path('/HardwareVersion', 0)
+    self.add_path('/FirmwareVersion', platform.system())
+    self.add_path('/HardwareVersion', getrevision())
     self.add_path('/Connected', 0)  # Mark devices as disconnected until they are confirmed
 
     # Create device type specific objects set values to empty until connected
