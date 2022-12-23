@@ -23,8 +23,6 @@ from settingsdevice import SettingsDevice  # available in the velib_python repos
 dbusservice = None
 
 def update():
-# the only service left running is the Raspberry pi CPU temperature.
-#
      update_rpi()
      return True
 
