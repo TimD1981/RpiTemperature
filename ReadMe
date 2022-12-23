@@ -1,1 +1,10 @@
+Add the CPU temperature to Victron Venus OS (if running on Raspberry PI).
 
+Setup:
+RpiTemperature requires that SetupHelper is installed first.
+
+The easiest way to install RpiTemperature is to do a "blind install" of SetupHelper and then add the RpiTemperature package
+via the PackageManager menus.
+
+Refer to SetupHelper here:
+https://github.com/kwindrem/SetupHelper
