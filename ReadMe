@@ -1,5 +1,8 @@
 Add the CPU temperature to Victron Venus OS (if running on Raspberry PI).
 
+It is possible to set a custom name for the raspberry pi temperature. It is also possible to define the type of temperature sensor (battery, freezer, other). 
+I would recommend to use type other.
+
 Setup:
 RpiTemperature requires that SetupHelper is installed first.
 
