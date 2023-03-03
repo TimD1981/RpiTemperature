@@ -200,7 +200,7 @@ base = 'com.victronenergy'
 # Items marked with a (*) are included in the service name
 #
 
-dbus_cpu_service   = new_service(base, 'temperature', 'Rpi-cpu',  'Raspberry Pi OS',  6, 29,6)
+dbus_cpu_service   = new_service(base, 'temperature', 'RpiCpu',  'Raspberry Pi OS',  6, 29,6)
 
 # Tidy up custom or missing items
 dbus_cpu_service['/ProductName']     = 'Raspberry Pi'
